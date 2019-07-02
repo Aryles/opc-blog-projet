@@ -1,0 +1,14 @@
+
+<li [ngClass]="{'list-group-item':true,
+'list-group-item-success': getColor() ==='green',
+'list-group-item-danger': getColor() ==='red'
+} 
+"
+>
+    <h3 [ngStyle]="{color: getColor()}"> {{titlePost}}</h3>  <div class="text-muted" style="position: relative; top: -35px; left: 800px;">{{lastUpdate | date: 'medium'}} </div>  
+    <p [ngStyle]="{color: getColor()}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia leo posuere turpis dictum fermentum. Cras congue a erat sit amet sollicitudin. Nulla gravida, risus quis accumsan eleifend, enim ligula.</p>
+    <button class="btn btn-success" (click)="love()"
+    >Love it !</button><button style="margin: 3px" class="btn btn-danger" (click)="dontLove()"
+    > Don't love it !</button>
+  
+</li>
